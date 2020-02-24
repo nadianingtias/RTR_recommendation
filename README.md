@@ -11,7 +11,7 @@
 
 [feedback]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback.png "Feedback Result"
 
-[feedback-understand]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedbac_understand.png "Finding Root Cause"
+[feedback-understand]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback_understand.png "Finding Root Cause"
 
 [design]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/design.png "Designing Solution"
 
