@@ -15,12 +15,18 @@
 
 [design]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/design.png "Designing Solution"
 
+[flask-form]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/flask-1.png "Formulir Preferensi User Awal"
+
+[flask-form2]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/flask-2.png "Formulir Preferensi User Awal - Filled"
+
+[flask-result]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/flask-3.png "Hasil Rekomendasi Berdasarkan Preferensi Input User"
+[flask-result2]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/flask-3.png "Hasil Rekomendasi Berdasarkan Item"
 
 # **FEEDBACK ANALYSIS & ITEM SIZE CLOTHING RECOMMENDATION**
 
 - **Dataset**: Dataset yang digunakan di dalam repository ini adalah dataset yang berasal dari sebuah website rental pakaian online bernama "Rent The Runway". Rent the Runway adalah layanan online yang menyediakan pakaian desainer dan penyewaan aksesoris. Awalnya merupakan murni perusahaan e-commerce, kemudian membuka lokasi ritel di New York City, Chicago, Washington, DC dan Las Vegas. Rent the Runway saat ini menawarkan lebih dari ribuan pakaian dan aksesoris dari lebih dari ratusan mitra desainer, termasuk Badgley Mischka, Vera Wang, Alexis Bittar, dan Calvin Klein.
 <br>
-![alt text][data-sumber]
+!["https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation"][data-sumber]
 
 - **Sumber Data** : [Kaggle Datasets](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation)
 
@@ -47,7 +53,7 @@ Dalam repository ini, terdapat dokumentasi Notebook dan Folder Flask:
 
 Data yang tersedia dalam sumber, berupa rekam data feedback transaksi pelanggan dari situs sewa pakaian online "Rent The Runway". 
 <br>
-![alt text][data-sumber]
+!["Struktur Data Sebelum Diolah"][data-preview]
 <br>
 Data di atas berisi 3 macam data yaitu data customer, data produk, dan data feedback dari transaksi.
 1. Data Customer
@@ -70,7 +76,7 @@ Data di atas berisi 3 macam data yaitu data customer, data produk, dan data feed
     - ``rented for`` : keperluan customer dalam menyewa
 
 Dari overview data yang tersedia ini, muncul beberapa pertanyaan yang akan dijawab penggalian informasi dari data itu sendiri. Berikut beberapa pertanyaan yang dapat diajukan untuk data feedback ini.
- ![alt text][question]
+ !["Proposed Question"][question]
  <br>
 
 
@@ -144,67 +150,25 @@ Sedangkan, item-based collaborative filtering lebih fokus kepada item produknya.
 
 # **Flask Preview**
 Berikut ini adalah preview App yang dibuat menggunakan Flask untuk menampilkan:
-> * Podcast Recommendation untuk user lama dan user baru<br>
-> * Sign Up atau registrasi user baru
-> * User Segmentation dan business insight dari dataset user dan produk
+> * Input Preferensi User Awal<br>
+> * Hasil Daftar Rekomendasi Berdasarkan Preferensi
+> * Hasil Daftar Rekomendasi Berdasarkan Item Rekomendasi
 
 ## **Home**
-Tampilan awal (``http://127.0.0.1:5000/``)  menampilkan 2 button, untuk sign in dan sign up.
+Tampilan awal (``http://127.0.0.1:5001/``)  menampilkan formulir untuk input preferensi kebutuhan user awal.
 
-![home](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/11_home.PNG)
+<br>
+![alt text][Flask-form]<br>
+<br>
+![alt text][Flask-form2]<br>
 
-## **Sign In**
-Tampilan untuk sign in (``http://127.0.0.1:5000/sign_in``). Pada halaman  ini ada dua pilihan, user atau staff (management).
+## **Hasil Rekomendasi**
+Tampilan awal (``http://127.0.0.1:5001/senddata``)  menampilkan hasil daftar rekomendasi yang tersedia. Terdapat tombol __"cari yang mirip ini"__, merupakan tombol ganti preferensi berdasarkan item terkait.
+Juga terdapat tombol __"kembali input data"__, untuk kembali kepada input preferensi user.
 
-![sig in](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/12_sign_in.PNG)
-
-## **User Sign In**
-Pada halaman ini (```http://127.0.0.1:5000/user```), user bisa masuk dengan mengetikkan user ID masing-masing.  Selanjutnya user akan diberikan rekomendasi podcast.
-
-![user sign in](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/13_user_sign_in.PNG)
-
-Mari kita coba masuk sebagai user dengan nomor user_id 19.
-
-![user sign in](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/13_user_sign_in_19.PNG)
-
-## **Podcast Recommendation**
-Tampilan rekomendasi (```http://127.0.0.1:5000/rekomendasi```) berisi judul podcast terakhir yang didengar oleh user dengan nomor **user_id** 19. Di bawahnya, user akan mendapat rekomendasi podcast lainnya berdasarkan podcast terakhir yang didengarnya.
-
-Kita bisa lihat podcast terakhir yang didengar oleh user (user_id: 19) berjudul *Setting up a Better Financial Future*. Podcast yang termasuk **topic: Finance** dan **objective: Personal**.
-
-![fav pod](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/14_last_podcast.PNG)
-
-Rekomendasi podcast lainnya berdasarkan podcast terakhir yang didengar oleh user dengan nomor **user_id** 19. Rekomendasi ini menggunakan **Content-based Filtering**. Aspek dari podcast yang dipakai untuk merekomendasikan podcast lainnya adalah **topic** dan **objective** podcast.
-
-Karena podcast terakhir yang didengar termasuk **topic: Finance** dan **objective: Personal**, maka podcast yang direkomendasikan juga podcast yang termasuk dua ciri khas tersebut. 
-
-Kita bisa lihat rekomendasi podcast selanjutnya juga podcast yang tergolong **topic: Finance** dan **objective: Personal**.
-
-![anot pod](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/15_another_podcast.PNG)
-
-## **Business  Insight**
-Ketika user memilih sign in as staff (management), maka akan render template ke halaman **business insight** (```http://127.0.0.1:5000/company```). Pada halaman ini, staf akan mendapatkan *business insight* di antaranya:
-> * User Segmentation (Behavioral Data & Demographic Information)
-> * Popular Topic
-> * Popular Podcast
-> * Popular Artist
-> * Podcast Objective
-
-![bus insight](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/16_bussiness_insight.PNG)
-
-## **Sign Up**
-Jika user memilih sign up di halaman home, maka user akan diarahkan ke halaman registration (```http://127.0.0.1:5000/register```) untuk memberikan data mereka. Data user terutama **age** dan **gender** digunakan untuk merekomendasikan podcast yang paling popular (**Popularity Filtering**) berdasarkan user dengan karakteristik serupa. 
-
-![register](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/17_register.PNG)
-
-Kita coba ``sign up`` sebagai user baru dengan nama **Andy**, email **andy@company.com**, usia **20** tahun, dan berjenis kelamin **male**.
-
-![register](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/18_register_andy.PNG)
-
-## **Podcast Recommendation for New User**
-Rekomendasi podcast (```http://127.0.0.1:5000/recommendation```) untuk user seperti Andy yang berusia 20 tahun dan berjenis kelamin laki-laki tampil sebagai berikut:
-
-![register](https://github.com/mnrclab/Final_Project_PodcastRecommendation_UserSegmentation/blob/master/19_recom_andy.PNG)
+<br>
+![alt text][Flask-result]<br>
 
 
-> **Note**: Dataset dengan judul ``Podcast_Dataset_Raw.csv`` dan ``Podcast_Dataset_Clean.csv`` tidak bisa kami _upload_ di halaman ini. Sebab, dataset tersebut adalah dataset resmi perusahaan. Apabila ada pertanyaan, kritik, dan saran, bisa berdiskusi langsung atau kontak saya di mohammadnurrokim@gmail.com. Terima kasih.
+
+> **Note**: Untuk diskusi lebih lanjut apabila ada pertanyaan, kritik, dan saran, berikut kontak email saya : nadia.ningtias20@gmail.com. Terima kasih.
