@@ -34,12 +34,15 @@
 - **Purpose** : Melakukan Customer Feedback Analysis, Menemukan Insight Yang Dapat Meningkatkan Layanan Perusahaan Terhadap Customer, Serta membangun salah satu solusi yang diajukan.
 - **Machine Learning**: Content Based Recommendation dan Collaborative Filtering.
 
+<hr>
+<br>
 Dalam repository ini, terdapat dokumentasi Notebook dan Folder Flask:
-> **Sebelum diproses, data yang akan digunakan telah dimasukkan di dalam database MongoDB** <br>
 
-> **8. Folder (``Flask-app``)**: Merupakan folder aplikasi Flask dengan main server bernama (``app.py``)
+**Sebelum diproses, data yang akan digunakan telah dimasukkan di dalam database MongoDB** <br>
 
-> **8. Folder (``Notebook``)**: Berisi file notebook .ipynb yang memuat step by step proses olah dan analisa data.
+> **Folder (``Flask-app``)**: Merupakan folder aplikasi Flask dengan main server bernama (``app.py``)
+
+> **Folder (``Notebook``)**: Berisi file notebook .ipynb yang memuat step by step proses olah dan analisa data.
 >> **1. Transform data into numerical**: Dokumentasi preprocessing data menjadi data yang dapat diolah secara numerik <br>
 > **2. Sentiment Labelling pada feedback review**: Dokumentasi pelabelan sentiment dari data teks review customer. (review_text, review_summary)<br>
 > **3. Analisa Feedback**: Dokumentasi analisa customer feedback secara umum berdasarkan _Fit Feedback_  (``fit``), _Rating Feedback_ (``rating``) dan, sentimen dari _Review Feedback_ (``review_text``, ``review_summary``) .<br>
@@ -49,6 +52,8 @@ Dalam repository ini, terdapat dokumentasi Notebook dan Folder Flask:
 > **7. Content Based Recommendation**: Dokumentasi rekomendasi item size clothing berdasarkan data content serta data transaksi untuk content terkait.<br>
 > **8. CFF_KNN_SVDPP**: Dokumentasi rekomendasi item size clothing menggunakan collaborative filtering berdasarkan interaksi antar user dalam merating item pakaian.<br>
 
+<hr>
+<br>
 
 ## Data 
 
@@ -76,11 +81,15 @@ Data di atas berisi 3 macam data yaitu data customer, data produk, dan data feed
     - ``fit`` : Feedback customer terhadap ukuran pakaian berupa "fit", "large", atau "small"
     - ``rented for`` : keperluan customer dalam menyewa
 
-Dari overview data yang tersedia ini, muncul beberapa pertanyaan yang akan dijawab penggalian informasi dari data itu sendiri. Berikut beberapa pertanyaan yang dapat diajukan untuk data feedback ini.
- !["Proposed Question"][question]
- <br>
-
+<hr>
 <br>
+
+Dari overview data yang tersedia ini, muncul beberapa pertanyaan yang akan dijawab penggalian informasi dari data itu sendiri. Berikut beberapa pertanyaan yang dapat diajukan untuk data feedback ini.
+!["Proposed Question"][question]
+<br>
+<hr>
+<br>
+
 # Feedback Analysis
 __Customer Feedback Analysis__ - sarana memahami sentimen, kebutuhan, dan keinginan customer, untuk membantu perusahaan tetap memberikan produk/layanan yang optimal.
 <br>
@@ -105,6 +114,8 @@ Ada 3 tipe actionable insight yang dapat diperoleh dari analisa feedback custome
 
 2 tahap penting dalam feedback analysis adalah tahap _categorization,_ dan _Finding root cause_. Karena 2 hal ini akan mengarahkan kita untuk memahami, dan merancang action yang solutif bagi perusahaan maupun customer. Salah satu rancangan action yang dibuat dalam projek ini adalah pembuatan _"Recommendation System"_
 <br>
+<br>
+
 # RTR Feedback Analysis
 
 ![alt text][feedback3]<br>
@@ -124,7 +135,8 @@ Jika perusahaan ingin mengurangi return pakaian dari customer, perlu ditingkatka
 
 ![alt text][Design]<br>
 
-
+<hr>
+<br>
 
 # Item-size Clothing Recommendation
 Sistem rekomendasi item beserta ukuran, dapat membantu perusahaan untuk meningkatkan pelayanan terhadap customer dalam hal pemilihan item pakaian dan ukuran yang tepat dengan keinginan customer.
