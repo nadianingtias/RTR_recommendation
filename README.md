@@ -24,15 +24,15 @@
 
 # **FEEDBACK ANALYSIS & ITEM SIZE CLOTHING RECOMMENDATION**
 
-- **Dataset**: Dataset yang digunakan di dalam repository ini adalah dataset yang berasal dari sebuah website rental pakaian online bernama "Rent The Runway". Rent the Runway adalah layanan online yang menyediakan pakaian desainer dan penyewaan aksesoris. Awalnya merupakan murni perusahaan e-commerce, kemudian membuka lokasi ritel di New York City, Chicago, Washington, DC dan Las Vegas. Rent the Runway saat ini menawarkan lebih dari ribuan pakaian dan aksesoris dari lebih dari ratusan mitra desainer, termasuk Badgley Mischka, Vera Wang, Alexis Bittar, dan Calvin Klein.
+- **Dataset**: Dataset yang digunakan di dalam repository ini adalah dataset yang berasal dari sebuah website rental pakaian online bernama __"Rent The Runway"__. Rent the Runway adalah layanan online yang menyediakan pakaian desainer dan penyewaan aksesoris. Awalnya merupakan murni perusahaan e-commerce, kemudian membuka lokasi ritel di New York City, Chicago, Washington, DC dan Las Vegas. Rent the Runway saat ini menawarkan lebih dari ribuan pakaian dan aksesoris dari lebih dari ratusan mitra desainer, termasuk Badgley Mischka, Vera Wang, Alexis Bittar, dan Calvin Klein.
 <br>
 
 !["https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation"][data-sumber]
 
 - **Sumber Data** : [Kaggle Datasets](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation)
 
-- **Purpose** : Melakukan Customer Feedback Analysis, Menemukan Insight Yang Dapat Meningkatkan Layanan Perusahaan Terhadap Customer
-- **Machine Learning**: Content Based Recommendation dan Collaborative Filtering
+- **Purpose** : Melakukan Customer Feedback Analysis, Menemukan Insight Yang Dapat Meningkatkan Layanan Perusahaan Terhadap Customer, Serta membangun salah satu solusi yang diajukan.
+- **Machine Learning**: Content Based Recommendation dan Collaborative Filtering.
 
 Dalam repository ini, terdapat dokumentasi Notebook dan Folder Flask:
 > **Sebelum diproses, data yang akan digunakan telah dimasukkan di dalam database MongoDB** <br>
@@ -80,7 +80,7 @@ Dari overview data yang tersedia ini, muncul beberapa pertanyaan yang akan dijaw
  !["Proposed Question"][question]
  <br>
 
-
+<br>
 # Feedback Analysis
 __Customer Feedback Analysis__ - sarana memahami sentimen, kebutuhan, dan keinginan customer, untuk membantu perusahaan tetap memberikan produk/layanan yang optimal.
 <br>
@@ -104,7 +104,7 @@ Ada 3 tipe actionable insight yang dapat diperoleh dari analisa feedback custome
 3. Keywords Extraction – _Categorize & Finding Root Cause_
 
 2 tahap penting dalam feedback analysis adalah tahap _categorization,_ dan _Finding root cause_. Karena 2 hal ini akan mengarahkan kita untuk memahami, dan merancang action yang solutif bagi perusahaan maupun customer. Salah satu rancangan action yang dibuat dalam projek ini adalah pembuatan _"Recommendation System"_
-
+<br>
 # RTR Feedback Analysis
 
 ![alt text][feedback3]<br>
@@ -112,6 +112,7 @@ Berdasar data, feedback customer cukup baik. 97% memberikan review positif, 73% 
 ![alt text][feedback]<br>
 Berdasarkan data, sebesar 51.7% transaksi mendapat feedback sempurna (angka ini tentu bukan angka yang cukup aman). Kemudian, 0.46% (92 transaksi) mendapat feedback sangat buruk. Sedangkan 47.8% sisanya terdiri dari bermacam-macam feedback.
 <br>
+
 ![alt text][feedback-understand]<br>
 Dari data review negatif customer, kita mendapatkan berbagai term menarik dan insightful. Kita melihat banyak term tentang kesesuaian ukuran pakaian dengan customer seperti
  (size, fit, small, little, short, long dst). 
@@ -120,6 +121,7 @@ Serta ada beberapa term yang merujuk kepada pakaian seperti (material, fabric, l
 
 Jika perusahaan ingin mengurangi return pakaian dari customer, perlu ditingkatkan/dipikirkan kembali strategi untuk memberikan customer ukuran pakaian yang sesuai.
 <br>
+
 ![alt text][Design]<br>
 
 
@@ -158,18 +160,16 @@ Berikut ini adalah preview App yang dibuat menggunakan Flask untuk menampilkan:
 ## **Home**
 Tampilan awal (``http://127.0.0.1:5001/``)  menampilkan formulir untuk input preferensi kebutuhan user awal.
 
-<br>
 ![alt text][flask-form]<br>
-<br>
+
 ![alt text][flask-form2]<br>
 
 ## **Hasil Rekomendasi**
 Tampilan awal (``http://127.0.0.1:5001/senddata``)  menampilkan hasil daftar rekomendasi yang tersedia. Terdapat tombol __"cari yang mirip ini"__, merupakan tombol ganti preferensi berdasarkan item terkait.
 Juga terdapat tombol __"kembali input data"__, untuk kembali kepada input preferensi user.
 
-<br>
+
 ![alt text][flask-result]<br>
-<br>
 ![alt text][flask-result2]<br>
 
 
