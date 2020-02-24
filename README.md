@@ -1,17 +1,17 @@
 
 [feedback-cycle]:https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback_analysis_cycle.png "Feedback Analysis Cycle"
 
-[data-sumber]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/data_sumer.jpg "Data Sumber"
+[data-sumber]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/data_sumber.jpg "Data Sumber"
 
-[data-preview]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/data_preview.png "Data Sumber"
+[data-preview]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/data-preview.png "Data Sumber"
 
 [question]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/question.png "Proposed Question"
 
-[feedback3]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback-3.png "Feedback Detail"
+[feedback3]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback_3.png "Feedback Detail"
 
 [feedback]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback.png "Feedback Result"
 
-[feedback-understand]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedback-understand.png "Finding Root Cause"
+[feedback-understand]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/feedbac_understand.png "Finding Root Cause"
 
 [design]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/design.png "Designing Solution"
 
@@ -26,6 +26,7 @@
 
 - **Dataset**: Dataset yang digunakan di dalam repository ini adalah dataset yang berasal dari sebuah website rental pakaian online bernama "Rent The Runway". Rent the Runway adalah layanan online yang menyediakan pakaian desainer dan penyewaan aksesoris. Awalnya merupakan murni perusahaan e-commerce, kemudian membuka lokasi ritel di New York City, Chicago, Washington, DC dan Las Vegas. Rent the Runway saat ini menawarkan lebih dari ribuan pakaian dan aksesoris dari lebih dari ratusan mitra desainer, termasuk Badgley Mischka, Vera Wang, Alexis Bittar, dan Calvin Klein.
 <br>
+
 !["https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation"][data-sumber]
 
 - **Sumber Data** : [Kaggle Datasets](https://www.kaggle.com/rmisra/clothing-fit-dataset-for-size-recommendation)
@@ -158,16 +159,18 @@ Berikut ini adalah preview App yang dibuat menggunakan Flask untuk menampilkan:
 Tampilan awal (``http://127.0.0.1:5001/``)  menampilkan formulir untuk input preferensi kebutuhan user awal.
 
 <br>
-![alt text][Flask-form]<br>
+![alt text][flask-form]<br>
 <br>
-![alt text][Flask-form2]<br>
+![alt text][flask-form2]<br>
 
 ## **Hasil Rekomendasi**
 Tampilan awal (``http://127.0.0.1:5001/senddata``)  menampilkan hasil daftar rekomendasi yang tersedia. Terdapat tombol __"cari yang mirip ini"__, merupakan tombol ganti preferensi berdasarkan item terkait.
 Juga terdapat tombol __"kembali input data"__, untuk kembali kepada input preferensi user.
 
 <br>
-![alt text][Flask-result]<br>
+![alt text][flask-result]<br>
+<br>
+![alt text][flask-result2]<br>
 
 
 
