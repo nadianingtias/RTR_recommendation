@@ -23,6 +23,8 @@
 [flask-result2]: https://github.com/nadianingtias/RTR_recommendation/blob/master/Img/flask-3.png "Hasil Rekomendasi Berdasarkan Item"
 
 # **FEEDBACK ANALYSIS & ITEM SIZE CLOTHING RECOMMENDATION**
+> #### Analisa data transaksi sewa pakaian online berdasarkan feedback review, rating, dan fit. Serta pembuatan sistem rekomendasi item pakaian berdasarkan preferensi customer, dan popularitas produk.
+
 
 - **Dataset**: Dataset yang digunakan di dalam repository ini adalah dataset yang berasal dari sebuah website rental pakaian online bernama __"Rent The Runway"__. Rent the Runway adalah layanan online yang menyediakan pakaian desainer dan penyewaan aksesoris. Awalnya merupakan murni perusahaan e-commerce, kemudian membuka lokasi ritel di New York City, Chicago, Washington, DC dan Las Vegas. Rent the Runway saat ini menawarkan lebih dari ribuan pakaian dan aksesoris dari lebih dari ratusan mitra desainer, termasuk Badgley Mischka, Vera Wang, Alexis Bittar, dan Calvin Klein.
 <br>
